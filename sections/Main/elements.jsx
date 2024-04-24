@@ -42,3 +42,9 @@ export const StyledContent = styled(({ backgroundUrl = '', ...props }) => <Conte
     background: url(${({ backgroundUrl }) => backgroundUrl}) no-repeat;
     background-size: contain;
 `;
+
+export const StyledImageContainer = styled(({ ...props }) => (<div {...props} />))`
+    height: 100%;
+    display: flex;
+    justify-content: center;
+`;

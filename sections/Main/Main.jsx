@@ -5,6 +5,7 @@ import {
     StyledContainer,
     StyledTitle,
     StyledDescription,
+    StyledImageContainer,
     StyledContent
 } from "./elements";
 
@@ -16,6 +17,9 @@ export const Main = ({ image, title, description, backgroundUrl, ...props }) => 
                 <StyledDescription>{description}</StyledDescription>
             </StyledTextContainer>
             <StyledContent backgroundUrl={backgroundUrl}>
+                <StyledImageContainer>
+                    <Image src={image.src} alt={image.alt} width={image.width} height={image.height} priority={true} />
+                </StyledImageContainer>
             </StyledContent>
         </StyledContainer>
     );
