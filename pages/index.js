@@ -1,4 +1,4 @@
-import { Hero } from "../sections";
+import { Hero, Main } from "../sections";
 
 const heroProps = {
     image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
