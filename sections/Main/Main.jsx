@@ -1,8 +1,11 @@
+import Image from "next/image";
+
 import {
     StyledTextContainer,
     StyledContainer,
     StyledTitle,
-    StyledDescription
+    StyledDescription,
+    StyledContent
 } from "./elements";
 
 export const Main = ({ image, title, description, backgroundUrl, ...props }) => {
@@ -12,6 +15,8 @@ export const Main = ({ image, title, description, backgroundUrl, ...props }) => 
                 <StyledTitle>{title}</StyledTitle>
                 <StyledDescription>{description}</StyledDescription>
             </StyledTextContainer>
+            <StyledContent backgroundUrl={backgroundUrl}>
+            </StyledContent>
         </StyledContainer>
     );
 };

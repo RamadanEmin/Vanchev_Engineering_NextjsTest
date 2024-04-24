@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import {
     SectionContainer,
     SectionHeading,
-    SectionSubheading
+    SectionSubheading,
+    ContentContainer
 } from '~/components';
 
 export const StyledContainer = styled(({ height, ...props }) => (<SectionContainer {...props} />))`
@@ -35,4 +36,9 @@ export const StyledTitle = styled((props) => <SectionHeading {...props} />)`
 export const StyledDescription = styled((props) => (<SectionSubheading {...props} />))`
     text-align: center;
     margin-top: 0px;
+`;
+
+export const StyledContent = styled(({ backgroundUrl = '', ...props }) => <ContentContainer {...props} />)`
+    background: url(${({ backgroundUrl }) => backgroundUrl}) no-repeat;
+    background-size: contain;
 `;
