@@ -30,8 +30,8 @@ export const Card = ({
                         layout='responsive'
                         src={image.src}
                         alt={image.alt ? image.alt : "Icon"}
-                        width={image.width ? image.width : "40px"}
-                        height={image.height ? image.height : "40px"}
+                        width={image.width ? image.width : "40"}
+                        height={image.height ? image.height : "40"}
                     />
                 </StyledImageContainer>
             )}

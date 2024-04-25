@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import { theme } from "~/styles";
+import { theme } from "../styles/theme";
 
 function MyApp({ Component, pageProps }) {
   return (

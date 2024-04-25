@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, SectionContainer, SectionBigHeading, SectionSubheading } from "~/components";
+import { Button, SectionContainer, SectionBigHeading, SectionSubheading } from "../../components";
 
 export const StyledContainer = styled(({ height, ...props }) => <SectionContainer {...props} />)`
   align-items: center;

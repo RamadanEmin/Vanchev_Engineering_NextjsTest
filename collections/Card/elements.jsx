@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export const StyledCardContent = styled(({marginRight = 0,...props}) => <div {...props} />)`
+export const StyledCardContent = styled(({ marginRight = 0, ...props }) => <div {...props} />)`
     display: flex;
     flex-direction: ${(props) => (props.position === "right" ? "row-reverse" : "row")};
     align-items: center;
@@ -40,13 +40,13 @@ export const StyledCardInfo = styled(({ ...props }) => <div {...props} />)`
     `;
 
 export const StyledCardTitle = ({ href, children, ...props }) => {
-    if (href) {
-        return (
-            <Link href={href} passHref>
-                    <CardTitle {...props}>{children}</CardTitle>
-            </Link>
-        );
-    }
+    return href ? (
+        <Link style={{ textDecoration: 'none' }} href={href} passHref>
+                <CardTitle {...props}>{children}</CardTitle>
+        </Link>
+    ) : (
+        <CardTitle {...props}>{children}</CardTitle>
+    );
 };
 
 const CardTitle = styled(({ ...props }) => <h2 {...props} />)`
@@ -54,6 +54,7 @@ const CardTitle = styled(({ ...props }) => <h2 {...props} />)`
     margin: 0;
     font-weight: bold;
     font-family: Poppins;
+    color: black; 
 
     @media screen and (max-width: 768px) {
         font-size: 1rem;

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { SectionInnerHeading } from "~/components";
+import { SectionInnerHeading } from "../../components";
 
 const outlinedVariantButton = css`
   background-color: transparent;
