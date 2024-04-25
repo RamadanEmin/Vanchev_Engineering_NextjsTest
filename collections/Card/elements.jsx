@@ -17,3 +17,12 @@ export const StyledCardContent = styled(({marginRight = 0,...props}) => <div {..
         outline: 2px solid #1173fd;
     }
 `;
+
+export const StyledImageContainer = styled(({ position = "right", ...props }) => <div {...props} />)`
+    max-width: 3rem;
+    max-height: 3rem;
+    width: 100%;
+    height: 100%;
+    margin-left: ${({ position }) => (position === "right" ? "40px" : 0)};
+    margin-right: ${({ position }) => (position === "left" ? "40px" : 0)};
+`;
