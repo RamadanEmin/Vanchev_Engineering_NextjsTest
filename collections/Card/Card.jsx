@@ -1,9 +1,24 @@
-import React from 'react';
+import {
+    StyledCardContent,
+} from "./elements";
 
-const Card = () => {
+export const Card = ({
+    heading,
+    text,
+    image,
+    marginRight,
+    href,
+    borderOnHover,
+    hoverStyles,
+    ...props
+}) => {
     return (
-        <div>Card</div>
+        <StyledCardContent
+            {...props}
+            hoverStyles={hoverStyles}
+            marginRight={marginRight}
+            position={image ? image.position : null}
+        >
+        </StyledCardContent>
     );
-}
-
-export default Card;
+};

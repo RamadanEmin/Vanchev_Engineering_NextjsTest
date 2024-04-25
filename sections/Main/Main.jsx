@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Card } from "../../collections/Card";
 import { cards } from "../../utils";
 
 import {
