@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cards } from "../../utils";
 
 import {
     StyledTextContainer,
@@ -6,7 +7,8 @@ import {
     StyledTitle,
     StyledDescription,
     StyledImageContainer,
-    StyledContent
+    StyledContent,
+    StyledCardsContainer
 } from "./elements";
 
 export const Main = ({ image, title, description, backgroundUrl, ...props }) => {
@@ -20,6 +22,21 @@ export const Main = ({ image, title, description, backgroundUrl, ...props }) => 
                 <StyledImageContainer>
                     <Image src={image.src} alt={image.alt} width={image.width} height={image.height} priority={true} />
                 </StyledImageContainer>
+
+                <StyledCardsContainer>
+                    {cards.map((card, i) => {
+                        return (
+                            <Card
+                                key={i}
+                                heading={card.heading}
+                                text={card.text}
+                                image={card.image}
+                                marginRight={card.marginRight}
+                                href={card.href}
+                            />
+                        );
+                    })}
+                </StyledCardsContainer>
             </StyledContent>
         </StyledContainer>
     );

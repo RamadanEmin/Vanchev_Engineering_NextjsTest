@@ -48,3 +48,12 @@ export const StyledImageContainer = styled(({ ...props }) => (<div {...props} />
     display: flex;
     justify-content: center;
 `;
+
+export const StyledCardsContainer = styled(({ ...props }) => (<div {...props} />))`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    gap: 2rem;
+`;
