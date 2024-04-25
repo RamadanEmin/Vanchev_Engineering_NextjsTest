@@ -3,6 +3,7 @@ import {
     StyledImageContainer,
     StyledCardInfo,
     StyledCardTitle,
+    StyledCardText
 } from "./elements";
 import Image from "next/image";
 
@@ -36,6 +37,7 @@ export const Card = ({
             )}
             <StyledCardInfo>
                 <StyledCardTitle href={href} className="CardTitle">{heading}</StyledCardTitle>
+                <StyledCardText text={text} />
             </StyledCardInfo>
         </StyledCardContent>
     );

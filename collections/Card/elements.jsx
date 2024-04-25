@@ -17,6 +17,11 @@ export const StyledCardContent = styled(({marginRight = 0,...props}) => <div {..
     &:active {
         outline: 2px solid #1173fd;
     }
+
+    &:hover .CardTitle {
+        text-decoration: underline;
+        color: #1173fd
+    }
 `;
 
 export const StyledImageContainer = styled(({ position = "right", ...props }) => <div {...props} />)`
@@ -49,4 +54,16 @@ const CardTitle = styled(({ ...props }) => <h2 {...props} />)`
     margin: 0;
     font-weight: bold;
     font-family: Poppins;
+`;
+
+export const StyledCardText = styled(({ text = "", ...props }) => (
+    <p {...props}>
+        {text.split(/\*\*(.*?)\*\*/).map((item, index) => {
+            return index % 2 === 0 ? <span key={index}>{item}</span> : <strong key={index}>{item}</strong>;
+        })}
+    </p>
+))`
+    font-size: 0.9rem;
+    margin: 0;
+    font-family: "Poppins";
 `;
