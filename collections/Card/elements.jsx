@@ -54,6 +54,10 @@ const CardTitle = styled(({ ...props }) => <h2 {...props} />)`
     margin: 0;
     font-weight: bold;
     font-family: Poppins;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
+    }
 `;
 
 export const StyledCardText = styled(({ text = "", ...props }) => (
@@ -66,4 +70,8 @@ export const StyledCardText = styled(({ text = "", ...props }) => (
     font-size: 0.9rem;
     margin: 0;
     font-family: "Poppins";
+
+    @media screen and (max-width: 768px) {
+        font-size: 0.875rem;
+    }
 `;
